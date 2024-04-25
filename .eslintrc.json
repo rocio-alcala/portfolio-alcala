@@ -8,5 +8,6 @@
       "component": true,
       "html": false
     }
-  ]}
+  ],
+  "react/no-unescaped-entities": ["warn"]}
 }
