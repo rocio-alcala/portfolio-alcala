@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}"
   ],
+  darkMode: "selector",
   theme: {
     extend: {
       backgroundImage: {
@@ -22,11 +23,11 @@ const config: Config = {
       colors: {
         "background-light": "#F5F4F3",
         "background-dark": "#211F1A",
-        "primary-text-light": "#181714",
+        "primary-text-light": "#5D564A",
         "primary-text-dark": "#B1AB9D",
         "secondary-text-light": "#B8B2A6",
         "secondary-text-dark": "#F1EFED",
-        "background-secondary-light": "#B8B2A6",
+        "background-secondary-light": "#DEDCD6",
         "background-secondary-dark": "#4C463C"
       },
       keyframes: {

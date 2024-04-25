@@ -6,7 +6,7 @@ export default function Home() {
       <div className="p-10 text-2xl sm:text-4xl md:text-6xl mt-24">
         <h1 className="text-3xl sm:text-5xl md:text-8xl">Hi, I'm Rocio.</h1>
         <div className="w-max">
-          <h2 className="typetext border-r-6 border-white">
+          <h2 className="typetext border-primary-text-light dark:border-primary-text-dark">
             I'm a front end developer
           </h2>
         </div>
