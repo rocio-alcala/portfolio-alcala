@@ -2,31 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Animacion no incluida en tailwind ya que no permite steps */
 .typetext {
+  border-right: 2px solid;
   width: 100%;
   padding-right: 2px;
   overflow: hidden;
   white-space: nowrap;
-  animation: blink 2s steps(25) forwards, typing 2s steps(25);
+  animation: blink 0.5s ease 6 forwards, typing 3s steps(25);
 }
 
 .typetext2 {
+  border-right: 2px solid;
   width: 100%;
   padding-right: 2px;
   overflow: hidden;
   white-space: nowrap;
-  animation: blink 0.8s ease 2s infinite both, typing 2s steps(23) 2s backwards;
+  animation: blink 0.5s ease 3s infinite both, typing 2s steps(23) 3s backwards;
 }
 
 @keyframes blink {
   0% {
-    border-color: transparent;
+    border-style: none;
   }
   50% {
-    border-color: rgb(23, 22, 22);
+    border-style: solid;
   }
   100% {
-    border-color: transparent;
+    border-style: none;
   }
 }
 
