@@ -1,14 +1,27 @@
 import { BiCodeAlt, BiEnvelope, BiMoon, BiSun, BiUser } from "react-icons/bi";
 import NavBarItem from "./NavBarItem";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function NavBarList() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const storageMode = localStorage.getItem("mode");
+    if (storageMode) {
+      return storageMode === "dark" ? true : false;
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? true
+      : false;
+  });
 
-  function handleDarkModeToggle() {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle("dark");
-  }
+  useEffect(() => {
+    if (darkMode) {
+      localStorage.setItem("mode", "dark");
+      document.documentElement.classList.add("dark");
+    } else {
+      localStorage.setItem("mode", "light");
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
 
   return (
     <>
@@ -28,13 +41,13 @@ export default function NavBarList() {
         {darkMode ? (
           <BiSun
             className="animate-fade-out-top hover:text-secondary-text-light dark:hover:text-secondary-text-dark transition-* duration-300"
-            onClick={handleDarkModeToggle}
+            onClick={() => setDarkMode(!darkMode)}
             size={25}
           />
         ) : (
           <BiMoon
             className="animate-fade-out-top hover:text-secondary-text-light dark:hover:text-secondary-text-dark transition-* duration-300"
-            onClick={handleDarkModeToggle}
+            onClick={() => setDarkMode(!darkMode)}
             size={25}
           />
         )}
