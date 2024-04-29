@@ -1,10 +1,13 @@
 import { BiCodeAlt, BiEnvelope, BiMoon, BiSun, BiUser } from "react-icons/bi";
 import NavBarItem from "./NavBarItem";
 import { useEffect, useState } from "react";
+import { isRunningOnClient } from "../../helpers";
 
 export default function NavBarList() {
+  console.log(isRunningOnClient());
+
   const [darkMode, setDarkMode] = useState(() => {
-    const storageMode = localStorage.getItem("mode");
+    const storageMode = isRunningOnClient() && localStorage.getItem("mode");
     if (storageMode) {
       return storageMode === "dark" ? true : false;
     }
