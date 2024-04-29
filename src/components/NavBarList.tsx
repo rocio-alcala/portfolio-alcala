@@ -5,7 +5,11 @@ import { isRunningOnClient } from "../../helpers";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-export default function NavBarList() {
+interface NavBarList {
+  onItemClick?: () => void;
+}
+
+export default function NavBarList({ onItemClick }: NavBarList) {
   const currentPath = usePathname();
   const [darkMode, setDarkMode] = useState(() => {
     if (isRunningOnClient()) {
@@ -34,19 +38,19 @@ export default function NavBarList() {
   return (
     <>
       <Link href={"/about-me"}>
-        <NavBarItem active={currentPath === "/about-me"}>
+        <NavBarItem onClick={onItemClick} active={currentPath === "/about-me"}>
           <BiUser size={25} />
           About me
         </NavBarItem>
       </Link>
       <Link href={"/projects"}>
-        <NavBarItem active={currentPath === "/projects"}>
+        <NavBarItem onClick={onItemClick} active={currentPath === "/projects"}>
           <BiCodeAlt size={25} />
           Projects
         </NavBarItem>
       </Link>
       <Link href={"/contact"}>
-        <NavBarItem active={currentPath === "/contact"}>
+        <NavBarItem onClick={onItemClick} active={currentPath === "/contact"}>
           <BiEnvelope size={25} />
           Contact me
         </NavBarItem>

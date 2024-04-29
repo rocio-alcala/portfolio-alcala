@@ -9,8 +9,14 @@ export default function NavBar() {
 
   function handleMenuToggle() {
     setIsMenuOpen(!isMenuOpen);
+
+    if (!isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
   }
-  useEffect(() => {
+  /*  useEffect(() => {
     const originalOverflow = document.body.style.overflow;
 
     if (isMenuOpen) {
@@ -23,7 +29,7 @@ export default function NavBar() {
     return () => {
       document.body.style.overflow = originalOverflow;
     };
-  }, [isMenuOpen]);
+  }, [isMenuOpen]); */
 
   return (
     <>
@@ -34,7 +40,7 @@ export default function NavBar() {
             <NavBarList />
           </ul>
         </div>
-        {/* toggle navbar */}
+        {/* toggle mobile navbar */}
         <div className="sm:hidden sm:opacity-0 flex justify-end p-6 animate-fade-out-top ">
           {isMenuOpen ? (
             <BiX
@@ -58,7 +64,7 @@ export default function NavBar() {
             } pr-4 h-screen w-full left-0 bg-background-light dark:bg-background-dark animate-fade-out-top transition-all duration-500`}
           >
             <ul className="flex flex-col items-end">
-              <NavBarList />
+              <NavBarList onItemClick={handleMenuToggle} />
             </ul>
           </div>
         </div>
