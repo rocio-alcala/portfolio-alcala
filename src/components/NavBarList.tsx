@@ -2,8 +2,11 @@ import { BiCodeAlt, BiEnvelope, BiMoon, BiSun, BiUser } from "react-icons/bi";
 import NavBarItem from "./NavBarItem";
 import { useEffect, useState } from "react";
 import { isRunningOnClient } from "../../helpers";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function NavBarList() {
+  const currentPath = usePathname();
   const [darkMode, setDarkMode] = useState(() => {
     if (isRunningOnClient()) {
       const storageMode = localStorage.getItem("mode");
@@ -30,18 +33,24 @@ export default function NavBarList() {
 
   return (
     <>
-      <NavBarItem>
-        <BiUser size={25} />
-        About me
-      </NavBarItem>
-      <NavBarItem>
-        <BiCodeAlt size={25} />
-        Projects
-      </NavBarItem>
-      <NavBarItem>
-        <BiEnvelope size={25} />
-        Contact me
-      </NavBarItem>
+      <Link href={"/about-me"}>
+        <NavBarItem active={currentPath === "/about-me"}>
+          <BiUser size={25} />
+          About me
+        </NavBarItem>
+      </Link>
+      <Link href={"/projects"}>
+        <NavBarItem active={currentPath === "/projects"}>
+          <BiCodeAlt size={25} />
+          Projects
+        </NavBarItem>
+      </Link>
+      <Link href={"/contact"}>
+        <NavBarItem active={currentPath === "/contact"}>
+          <BiEnvelope size={25} />
+          Contact me
+        </NavBarItem>
+      </Link>
       <div className="hover:cursor-pointer m-2 p-1 flex items-center">
         {darkMode ? (
           <BiSun
