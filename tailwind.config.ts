@@ -40,10 +40,21 @@ const config: Config = {
             opacity: "1",
             transform: "translateY(0%)"
           }
+        },
+        "fade-out-bottom": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(50%)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0%)"
+          }
         }
       },
       animation: {
-        "fade-out-top": "fade-out-top 1.8s"
+        "fade-out-top": "fade-out-top 1.8s",
+        "fade-out-bottom": "fade-out-bottom 1.8s"
       }
     }
   },
