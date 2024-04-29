@@ -4,16 +4,18 @@ import { useEffect, useState } from "react";
 import { isRunningOnClient } from "../../helpers";
 
 export default function NavBarList() {
-  console.log(isRunningOnClient());
-
   const [darkMode, setDarkMode] = useState(() => {
-    const storageMode = isRunningOnClient() && localStorage.getItem("mode");
-    if (storageMode) {
-      return storageMode === "dark" ? true : false;
+    if (isRunningOnClient()) {
+      const storageMode = localStorage.getItem("mode");
+      if (storageMode) {
+        return storageMode === "dark" ? true : false;
+      }
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? true
+        : false;
+    } else {
+      return false;
     }
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? true
-      : false;
   });
 
   useEffect(() => {
