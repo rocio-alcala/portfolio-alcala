@@ -9,6 +9,7 @@
       "html": false
     }
   ],
-  "react/no-unescaped-entities": "off"
+  "react/no-unescaped-entities": "off",
+  "react/display-name": ["error", { "ignoreTranspilerName": true }],
 }
 }
