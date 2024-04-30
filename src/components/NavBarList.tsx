@@ -1,4 +1,11 @@
-import { BiCodeAlt, BiEnvelope, BiMoon, BiSun, BiUser } from "react-icons/bi";
+import {
+  BiCodeAlt,
+  BiEnvelope,
+  BiHomeAlt,
+  BiMoon,
+  BiSun,
+  BiUser
+} from "react-icons/bi";
 import NavBarItem from "./NavBarItem";
 import { useEffect, useState } from "react";
 import { isRunningOnClient } from "../../helpers";
@@ -37,6 +44,12 @@ export default function NavBarList({ onItemClick }: NavBarList) {
 
   return (
     <>
+      <Link href={"/"}>
+        <NavBarItem onClick={onItemClick} active={currentPath === "/"}>
+          <BiHomeAlt size={25} />
+          Home
+        </NavBarItem>
+      </Link>
       <Link href={"/about-me"}>
         <NavBarItem onClick={onItemClick} active={currentPath === "/about-me"}>
           <BiUser size={25} />
