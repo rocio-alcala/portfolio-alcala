@@ -14,7 +14,7 @@ export default function Button({
   return (
     <button
       className={cn(
-        "w-full rounded disabled:opacity-30 p-3 text-center border-2 hover:border-3 tracking-widest text-sm font-semibold leading-4",
+        "w-full rounded p-3 text-center border-2 hover:bg-background-secondary-light disabled:bg-background-secondary-light dark:hover:bg-background-secondary-dark dark:disabled:bg-background-secondary-dark tracking-widest text-sm font-semibold leading-4",
         className
       )}
       {...rest}
