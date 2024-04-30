@@ -35,13 +35,13 @@ export default function NavBar() {
     <>
       <nav>
         {/* desktop navbar */}
-        <div className="justify-end p-6 mr-6 animate-fade-out-top hidden sm:flex sm:visible">
+        <div className="justify-end p-6 mr-6 animate-fade-out-top hidden md:flex md:visible">
           <ul className="flex gap-6 font-manrope font-extrabold">
             <NavBarList />
           </ul>
         </div>
         {/* toggle mobile navbar */}
-        <div className="sm:hidden sm:opacity-0 flex justify-end p-6 animate-fade-out-top ">
+        <div className="md:hidden md:opacity-0 flex justify-end p-6 animate-fade-out-top ">
           {isMenuOpen ? (
             <BiX
               className="hover:text-secondary-text-light dark:hover:text-secondary-text-dark transition-all duration-500"
@@ -57,7 +57,7 @@ export default function NavBar() {
           )}
         </div>
         {/* mobile navbar */}
-        <div className="relative sm:hidden sm:opacity-0 ">
+        <div className="relative md:hidden md:opacity-0">
           <div
             className={`absolute ${
               isMenuOpen ? "top-0" : "top-[-898px]"
