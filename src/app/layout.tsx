@@ -29,7 +29,8 @@ export default function RootLayout({
         className={`${inconsolata.variable} ${manrope.variable} flex flex-col min-h-svh bg-background-light dark:bg-background-dark text-primary-text-light dark:text-primary-text-dark transition-all duration-500`}
       >
         <NavBar />
-        <main className="flex-1">{children}</main>
+        {children}
+
         <footer className="bg-background-secondary-light dark:bg-background-secondary-dark p-3 px-12 text-center flex justify-between animate-fade-out-bottom">
           <div className="flex">
             Made with love <BiHeart size={25} />
