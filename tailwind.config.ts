@@ -58,12 +58,58 @@ const config: Config = {
           "100%": {
             opacity: "1"
           }
+        },
+        "fade-in-right": {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(-20px)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)"
+          }
+        },
+        "fade-in-left": {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(20px)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)"
+          }
+        },
+        pulse: {
+          "0%": {
+            transform: "scale(1)"
+          },
+          "50%": {
+            transform: "scale(1.4)"
+          },
+          "100%": {
+            transform: "scale(1)"
+          }
+        },
+        sink: {
+          "0%": {
+            transform: "translateY(-10px)"
+          },
+          "50%": {
+            transform: "translateY(0)"
+          },
+          "100%": {
+            transform: "translateY(-10px)"
+          }
         }
       },
       animation: {
         "fade-out-top": "fade-out-top 1.8s",
         "fade-out-bottom": "fade-out-bottom 1.8s",
-        "fade-in": "fade-in 1s ease-in"
+        "fade-in": "fade-in 1s ease-in",
+        "fade-in-right": "fade-in-right 1s ease-in-out",
+        "fade-in-left": "fade-in-left 1s ease-in-out",
+        pulse: "pulse 1s ease-in-out",
+        sink: "sink 1s ease-in-out infinite"
       }
     }
   },
