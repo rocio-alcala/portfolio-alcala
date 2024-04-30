@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 
 export default function Contact() {
   return (
-    <section className="font-inconsolata font-semibold p-6 mb-6 flex flex-col justify-center items-center">
+    <section className="animate-fade-in font-inconsolata font-semibold p-6 mb-6 flex flex-col justify-center items-center">
       <h1 className="font-bolder text-2xl text-start mb-5">
         What do you want to tell me?
       </h1>

@@ -50,11 +50,20 @@ const config: Config = {
             opacity: "1",
             transform: "translateY(0%)"
           }
+        },
+        "fade-in": {
+          "0%": {
+            opacity: "0"
+          },
+          "100%": {
+            opacity: "1"
+          }
         }
       },
       animation: {
         "fade-out-top": "fade-out-top 1.8s",
-        "fade-out-bottom": "fade-out-bottom 1.8s"
+        "fade-out-bottom": "fade-out-bottom 1.8s",
+        "fade-in": "fade-in 1s ease-in"
       }
     }
   },
