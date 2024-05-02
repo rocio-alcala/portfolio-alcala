@@ -35,13 +35,13 @@ export default function NavBar() {
     <>
       <nav>
         {/* desktop navbar */}
-        <div className="justify-end p-6 mr-6 animate-fade-out-top hidden md:flex md:visible">
+        <div className="justify-end fixed items-center bg-background-light dark:bg-background-dark transition-all duration-500 w-full z-50 top-0 right-0 p-6 h-20 animate-fade-out-top hidden md:flex md:visible ">
           <ul className="flex gap-6 font-manrope font-extrabold">
             <NavBarList />
           </ul>
         </div>
         {/* toggle mobile navbar */}
-        <div className="md:hidden md:opacity-0 flex justify-end p-6 animate-fade-out-top ">
+        <div className="fixed w-full items-center z-50 top-0 right-0 h-14 md:hidden md:opacity-0 flex justify-end p-2 pr-5 animate-fade-out-top bg-background-light dark:bg-background-dark transition-all duration-500">
           {isMenuOpen ? (
             <BiX
               className="hover:text-secondary-text-light dark:hover:text-secondary-text-dark transition-all duration-500"
