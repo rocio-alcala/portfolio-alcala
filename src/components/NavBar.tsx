@@ -36,7 +36,7 @@ export default function NavBar() {
       <nav>
         {/* desktop navbar */}
         <div className="justify-end fixed items-center bg-background-light dark:bg-background-dark transition-all duration-500 w-full z-50 top-0 right-0 p-6 h-20 animate-fade-out-top hidden md:flex md:visible ">
-          <ul className="flex gap-6 font-manrope font-extrabold">
+          <ul className="flex gap-6 font-extrabold">
             <NavBarList />
           </ul>
         </div>
@@ -55,17 +55,17 @@ export default function NavBar() {
               size={25}
             />
           )}
-        </div>
-        {/* mobile navbar */}
-        <div className="relative md:hidden md:opacity-0">
-          <div
-            className={`absolute ${
-              isMenuOpen ? "top-0" : "top-[-898px]"
-            } pr-4 h-screen w-full left-0 z-50 bg-background-light dark:bg-background-dark animate-fade-out-top transition-all duration-500`}
-          >
-            <ul className="flex flex-col items-end">
-              <NavBarList onItemClick={handleMenuToggle} />
-            </ul>
+          {/* mobile navbar */}
+          <div className="md:hidden md:opacity-0">
+            <div
+              className={`absolute ${
+                isMenuOpen ? "top-[56px]" : "top-[-898px]"
+              } pr-4 h-screen w-full left-0 z-50 bg-background-light dark:bg-background-dark animate-fade-out-top transition-all duration-500`}
+            >
+              <ul className="flex flex-col items-end">
+                <NavBarList onItemClick={handleMenuToggle} />
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
