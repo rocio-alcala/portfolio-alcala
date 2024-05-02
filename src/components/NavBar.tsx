@@ -61,7 +61,7 @@ export default function NavBar() {
           <div
             className={`absolute ${
               isMenuOpen ? "top-0" : "top-[-898px]"
-            } pr-4 h-screen w-full left-0 bg-background-light dark:bg-background-dark animate-fade-out-top transition-all duration-500`}
+            } pr-4 h-screen w-full left-0 z-50 bg-background-light dark:bg-background-dark animate-fade-out-top transition-all duration-500`}
           >
             <ul className="flex flex-col items-end">
               <NavBarList onItemClick={handleMenuToggle} />
