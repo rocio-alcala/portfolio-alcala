@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "name": "My cat id",
+      "id": 1,
+      "description": "Aplicacion web para guardar datos de tu gato en linea",
+      "url": "https://my-cat-id.vercel.app",
+      "img": "my-cat-id.png",
+      "repo": "https://github.com/rocio-alcala/my-cat-id"
+    },
+    {
+      "name": "Bibliotech",
+      "id": 2,
+      "description": "Aplicacion web para administracion de bibliotecas",
+      "url": "https://bibliotechapp.website/",
+      "img": "bibliotech.png",
+      "repo": "https://github.com/No-Country/c15-41-t-java-react"
+    },
+    {
+      "name": "Brastlewark",
+      "id": 3,
+      "description": "Aplicacion de busqueda de habitantes en una comunidad",
+      "url": "https://brastlewark-mocha.vercel.app/",
+      "img": "brastlewark.png",
+      "repo": "https://github.com/rocio-alcala/Brastlewark"
+    }
+  ]
+}
