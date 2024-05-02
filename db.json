@@ -3,7 +3,7 @@
     {
       "name": "My cat id",
       "id": 1,
-      "description": "Aplicacion web para guardar datos de tu gato en linea",
+      "description": "An app created with Nextjs to upload and manage data about your cat online, allowing you to keep track of vaccines, and vaccination and deworming dates.",
       "url": "https://my-cat-id.vercel.app",
       "img": "my-cat-id.png",
       "repo": "https://github.com/rocio-alcala/my-cat-id"
@@ -11,7 +11,7 @@
     {
       "name": "Bibliotech",
       "id": 2,
-      "description": "Aplicacion web para administracion de bibliotecas",
+      "description": "Bibliotech is a comprehensive library management platform that allows for searching and recording books, managing loans with dates and users, and sending automatic reminders to return books on time. The loading of this app might take some time until the server wakes up",
       "url": "https://bibliotechapp.website/",
       "img": "bibliotech.png",
       "repo": "https://github.com/No-Country/c15-41-t-java-react"
@@ -19,7 +19,7 @@
     {
       "name": "Brastlewark",
       "id": 3,
-      "description": "Aplicacion de busqueda de habitantes en una comunidad",
+      "description": "This app displays the citizens of a city and allows users to filter and search. I developed this project to implement pagination functionality on the client side.",
       "url": "https://brastlewark-mocha.vercel.app/",
       "img": "brastlewark.png",
       "repo": "https://github.com/rocio-alcala/Brastlewark"
