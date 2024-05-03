@@ -47,25 +47,25 @@ export default function NavBarList({ onItemClick }: NavBarList) {
       <Link href={"/"}>
         <NavBarItem onClick={onItemClick} active={currentPath === "/"}>
           <BiHomeAlt size={25} />
-          Home
+          home()
         </NavBarItem>
       </Link>
       <Link href={"/about-me"}>
         <NavBarItem onClick={onItemClick} active={currentPath === "/about-me"}>
           <BiUser size={25} />
-          About me
+          about()
         </NavBarItem>
       </Link>
       <Link href={"/projects"}>
         <NavBarItem onClick={onItemClick} active={currentPath === "/projects"}>
           <BiCodeAlt size={25} />
-          Projects
+          projects()
         </NavBarItem>
       </Link>
       <Link href={"/contact"}>
         <NavBarItem onClick={onItemClick} active={currentPath === "/contact"}>
           <BiEnvelope size={25} />
-          Contact me
+          contact()
         </NavBarItem>
       </Link>
       <div className="hover:cursor-pointer m-2 p-1 flex items-center">
