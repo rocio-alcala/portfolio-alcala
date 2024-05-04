@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { inconsolata, manrope } from "./font";
+import { inconsolata, manrope, poppins } from "./font";
 import "./globals.css";
 import {
   BiHeart,
@@ -26,7 +26,7 @@ export default function RootLayout({
         <link rel="icon" type="image" href="/icon.png" />
       </head>
       <body
-        className={`${inconsolata.variable} ${manrope.variable} font-inconsolata pt-14 md:pt-20 flex flex-col min-h-svh bg-background-light dark:bg-background-dark text-primary-text-light dark:text-primary-text-dark transition-all duration-500`}
+        className={`${inconsolata.variable} ${manrope.variable} ${poppins.variable} font-inconsolata pt-14 md:pt-20 flex flex-col min-h-svh bg-background-light dark:bg-background-dark text-primary-text-light dark:text-primary-text-dark transition-all duration-500`}
       >
         <NavBar />
         {children}

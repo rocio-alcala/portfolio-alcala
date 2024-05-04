@@ -38,3 +38,7 @@
     width: 0;
   }
 }
+
+.about {
+  animation-timeline: view(600px 0px);
+}

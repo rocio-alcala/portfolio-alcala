@@ -2,12 +2,12 @@ import StackItem from "@/components/StackItem";
 
 export default function AboutMe() {
   return (
-    <section className="animate-fade-in font-inconsolata font-semibold p-10 flex flex-1 flex-col justify-around">
-      <article className="flex flex-col animate-fade-in-right my-5 sm:w-[70%]">
-        <h2 className="text-4xl py-2 mb-2 items-start font-bold">
+    <section className=" font-inconsolata font-semibold p-10 flex flex-1 flex-col justify-around">
+      <article className="flex flex-col animate-fade-in-right my-10 sm:w-[70%] px-6 md:px-14 lg:px-32">
+        <h2 className="text-4xl md:text-6xl py-2 mb-2 items-start font-bold font-poppins">
           Me as a developer
         </h2>
-        <p className="text-xl">
+        <p className="text-2xl">
           Hi there! My name is Rocio, you can call me Rosie. I am a front end
           developer currently based in Argentina, captivated by the magic behind
           what makes the web work with each click. I work as a React developer
@@ -19,7 +19,7 @@ export default function AboutMe() {
           We eat with our eyes.
         </span>
       </article>
-      <div className="flex flex-wrap justify-center p-4 my-16">
+      <div className="about animate-fade-in flex flex-wrap justify-center p-4 my-10 md:my-32 md:mx-32 xl:mx-52">
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
@@ -33,11 +33,11 @@ export default function AboutMe() {
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
       </div>
-      <article className="flex flex-col items-end self-end animate-fade-in-left my-5  sm:w-[70%]">
-        <h2 className="text-4xl py-2 mb-2 text-end font-bold">
+      <article className="about flex flex-col items-end self-end animate-fade-in-left my-10 sm:w-[70%] px-6 md:px-14 lg:px-32">
+        <h2 className="text-4xl md:text-6xl py-2 mb-2 items-start font-bold font-poppins text-end">
           When I'm not coding
         </h2>
-        <p className="text-end text-xl">
+        <p className="text-end text-2xl">
           I'm also a biologist, gardener, pastry chef, hiker, ceramist, and
           animal lover. Curious and passionate about nature, and I love spending
           time with my cat.

@@ -18,7 +18,8 @@ const config: Config = {
         inconsolata: ["var(--font-inconsolata)"],
         "source-sans-pro": ["Source Sans Pro"],
         manrope: ["var(--font-manrope)"],
-        mulish: ["var(--font-mulish)"]
+        mulish: ["var(--font-mulish)"],
+        poppins: ["var(--font-poppins)"]
       },
       colors: {
         "background-light": "#F5F4F3",
@@ -62,7 +63,7 @@ const config: Config = {
         "fade-in-right": {
           "0%": {
             opacity: "0",
-            transform: "translateX(-20px)"
+            transform: "translateX(-60px)"
           },
           "100%": {
             opacity: "1",
@@ -72,7 +73,7 @@ const config: Config = {
         "fade-in-left": {
           "0%": {
             opacity: "0",
-            transform: "translateX(20px)"
+            transform: "translateX(60px)"
           },
           "100%": {
             opacity: "1",
@@ -99,6 +100,14 @@ const config: Config = {
           },
           "100%": {
             transform: "translateY(-10px)"
+          }
+        },
+        appear: {
+          "0%": {
+            height: "0%"
+          },
+          "100%": {
+            height: "100%"
           }
         }
       },

@@ -1,9 +1,21 @@
-import { Inconsolata, Roboto_Mono, Manrope, Mulish } from "next/font/google";
+import {
+  Inconsolata,
+  Roboto_Mono,
+  Manrope,
+  Mulish,
+  Poppins
+} from "next/font/google";
 
 export const inconsolata = Inconsolata({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inconsolata"
+});
+export const poppins = Poppins({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "700", "800"],
+  variable: "--font-poppins"
 });
 
 export const roboto_mono = Roboto_Mono({
