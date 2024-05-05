@@ -104,10 +104,16 @@ const config: Config = {
         },
         appear: {
           "0%": {
-            height: "0%"
+            width: "0%"
           },
           "100%": {
-            height: "100%"
+            width: "100%"
+          }
+        },
+        shadow: {
+          "100%": {
+            "box-shadow":
+              "0px 7px 10px rgba(0, 0, 0, -0.002) 0px 56px 80px rgba(0, 0, 0, 0.04)"
           }
         }
       },
@@ -118,7 +124,8 @@ const config: Config = {
         "fade-in-right": "fade-in-right 1s ease-in-out",
         "fade-in-left": "fade-in-left 1s ease-in-out",
         pulse: "pulse 1s ease-in-out",
-        sink: "sink 1s ease-in-out infinite"
+        sink: "sink 1s ease-in-out infinite",
+        appear: "appear 1s ease"
       }
     }
   },
