@@ -30,10 +30,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
         <p className="pb-3 md:hidden">{project.description}</p>
         <div className="relative">
-          <img
+          <Image
             className="rounded animate-[appear_1.8s_ease]"
             src={project.img}
             alt={project.name}
+            width={332}
+            height={183}
           />
           <p className="hidden md:block text-gray-900 rounded absolute top-0 left-0 h-full p-3 backdrop-blur-3xl opacity-0 hover:opacity-100 transition-all duration-700">
             {project.description}
