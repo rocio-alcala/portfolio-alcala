@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BiLogoGithub } from "react-icons/bi";
 
-type Project = {
+export type Project = {
   name: string;
   description: string;
   id: number;
