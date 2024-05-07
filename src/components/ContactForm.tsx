@@ -58,7 +58,7 @@ export default function ContactForm() {
   return (
     <>
       <form
-        className="w-[60%] min-w-80 flex flex-col justify-center"
+        className="w-[60%] min-w-64 flex flex-col justify-center"
         onSubmit={handleSubmit(onSubmit)}
       >
         <InputText
