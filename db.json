@@ -23,6 +23,14 @@
       "url": "https://brastlewark-mocha.vercel.app/",
       "img": "https://raw.githubusercontent.com/rocio-alcala/portfolio-alcala/main/public/brastlewark.png",
       "repo": "https://github.com/rocio-alcala/Brastlewark"
+    },
+    {
+      "name": "Covid data",
+      "id": 4,
+      "description": "A project that visualizes COVID cases and death data obtained from the Our World in Data database.",
+      "url": "https://coviddata-omega.vercel.app/",
+      "img": "https://raw.githubusercontent.com/rocio-alcala/portfolio-alcala/main/public/covid-data.png",
+      "repo": "https://github.com/rocio-alcala/coviddata"
     }
   ]
 }
