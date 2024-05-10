@@ -78,8 +78,8 @@ export default function ContactForm() {
           id="e-mail"
           {...register("email", {
             pattern: {
-              value: /^[A-Za-z]+@[A-Za-z]+\.[A-Za-z]+$/,
-              message: "email must a valid"
+              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+              message: "email must be valid"
             },
             required: "email is required"
           })}
