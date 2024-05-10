@@ -1,3 +1,4 @@
+import Loading from "./Loading";
 import StackItem from "./StackItem";
 
 export default function AboutMe() {
@@ -32,6 +33,7 @@ export default function AboutMe() {
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original.svg" />
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
+        <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" />
       </div>
       <article className="about flex flex-col items-end self-end animate-fade-in-left my-10 mb-16 sm:w-[70%] px-6 md:px-14 lg:px-32">
         <h2 className="text-4xl md:text-6xl py-2 mb-2 items-start font-bold font-poppins text-end">
