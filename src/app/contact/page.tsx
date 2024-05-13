@@ -6,7 +6,7 @@ export default function Contact() {
       <h1 className="font-bolder text-xl md:text-2xl text-start mb-5">
         What do you want to tell me?
       </h1>
-      <ContactForm></ContactForm>
+      <ContactForm />
     </section>
   );
 }

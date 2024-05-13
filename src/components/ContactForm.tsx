@@ -73,7 +73,7 @@ export default function ContactForm() {
           })}
           errors={errors.name?.message}
           label="name"
-        ></InputText>
+        />
         <InputText
           id="e-mail"
           {...register("email", {
@@ -86,7 +86,7 @@ export default function ContactForm() {
           errors={errors.email?.message}
           label="e-mail"
           placeholder="your email"
-        ></InputText>
+        />
         <InputTextArea
           id="message"
           placeholder="whats up?"
@@ -94,7 +94,7 @@ export default function ContactForm() {
           label="message"
           errors={errors.message?.message}
           className="min-h-80"
-        ></InputTextArea>
+        />
         <Button className="mt-3" type="submit" isLoading={isLoading}>
           SUBMIT
         </Button>
