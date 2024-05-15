@@ -9,7 +9,9 @@
   padding-right: 2px;
   overflow: hidden;
   white-space: nowrap;
-  animation: blink 0.5s ease 6 forwards, typing 3s steps(25);
+  animation:
+    blink 0.5s ease 6 forwards,
+    typing 3s steps(25);
 }
 
 .typetext2 {
@@ -18,7 +20,9 @@
   padding-right: 2px;
   overflow: hidden;
   white-space: nowrap;
-  animation: blink 0.5s ease 3s infinite both, typing 2s steps(23) 3s backwards;
+  animation:
+    blink 0.5s ease 3s infinite both,
+    typing 2s steps(23) 3s backwards;
 }
 
 @keyframes blink {

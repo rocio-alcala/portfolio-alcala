@@ -5,36 +5,36 @@ import {
   BiHeart,
   BiLogoGithub,
   BiLogoGmail,
-  BiLogoLinkedinSquare
+  BiLogoLinkedinSquare,
 } from "react-icons/bi";
 import NavBar from "@/components/NavBar";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Rocio Alcala",
-  description: "Portfolio Rocio Alcala"
+  description: "Portfolio Rocio Alcala",
 };
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html
       lang="en"
-      className="scrollbar-thin scrollbar-thumb-rounded-full scrollbar-track-transparent scrollbar-thumb-primary-text-light dark:scrollbar-thumb-primary-text-dark"
+      className="scrollbar-thin scrollbar-track-transparent scrollbar-thumb-primary-text-light scrollbar-thumb-rounded-full dark:scrollbar-thumb-primary-text-dark"
     >
       <head>
         <link rel="icon" type="image" href="/icon.png" />
       </head>
       <body
-        className={`${inconsolata.variable} ${manrope.variable} ${poppins.variable}  scroll-smooth  font-inconsolata pt-14 md:pt-20 flex flex-col min-h-svh bg-background-light dark:bg-background-dark text-primary-text-light dark:text-primary-text-dark transition-all duration-500`}
+        className={`${inconsolata.variable} ${manrope.variable} ${poppins.variable}  flex  min-h-svh flex-col scroll-smooth bg-background-light pt-14 font-inconsolata text-primary-text-light transition-all duration-500 md:pt-20 dark:bg-background-dark dark:text-primary-text-dark`}
       >
         <NavBar />
         {children}
 
-        <footer className="bg-background-secondary-light dark:bg-background-secondary-dark p-3 px-12 text-center flex justify-between animate-fade-out-bottom">
+        <footer className="flex animate-fade-out-bottom justify-between bg-background-secondary-light p-3 px-12 text-center dark:bg-background-secondary-dark">
           <div className="flex">
             Made with love <BiHeart size={25} />
           </div>
@@ -42,18 +42,18 @@ export default function RootLayout({
             <Link href="https://github.com/rocio-alcala">
               <BiLogoGithub
                 size={25}
-                className="hover:text-secondary-text-light dark:hover:text-secondary-text-dark transition duration-500"
+                className="transition duration-500 hover:text-secondary-text-light dark:hover:text-secondary-text-dark"
               />
             </Link>
             <Link href="https://www.linkedin.com/in/rocio-alcala-784174185/">
               <BiLogoLinkedinSquare
-                className="hover:text-secondary-text-light dark:hover:text-secondary-text-dark transition duration-500"
+                className="transition duration-500 hover:text-secondary-text-light dark:hover:text-secondary-text-dark"
                 size={25}
               />
             </Link>
             <Link href={"mailto:rro.alcala@gmail.com"}>
               <BiLogoGmail
-                className="hover:text-secondary-text-light dark:hover:text-secondary-text-dark transition duration-500"
+                className="transition duration-500 hover:text-secondary-text-light dark:hover:text-secondary-text-dark"
                 size={25}
               />
             </Link>

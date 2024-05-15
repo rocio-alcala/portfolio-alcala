@@ -35,22 +35,22 @@ export default function NavBar() {
     <>
       <nav>
         {/* desktop navbar */}
-        <div className="justify-end fixed items-center bg-background-light dark:bg-background-dark transition-all duration-500 w-full z-50 top-0 right-0 p-6 h-20 animate-fade-out-top hidden md:flex md:visible ">
+        <div className="fixed right-0 top-0 z-50 hidden h-20 w-full animate-fade-out-top items-center justify-end bg-background-light p-6 transition-all duration-500 md:visible md:flex dark:bg-background-dark ">
           <ul className="flex gap-6 font-extrabold">
             <NavBarList />
           </ul>
         </div>
         {/* toggle mobile navbar */}
-        <div className="fixed w-full items-center z-50 top-0 right-0 h-14 md:hidden md:opacity-0 flex justify-end p-2 pr-5 animate-fade-out-top bg-background-light dark:bg-background-dark transition-all duration-500">
+        <div className="fixed right-0 top-0 z-50 flex h-14 w-full animate-fade-out-top items-center justify-end bg-background-light p-2 pr-5 transition-all duration-500 md:hidden md:opacity-0 dark:bg-background-dark">
           {isMenuOpen ? (
             <BiX
-              className="hover:text-secondary-text-light dark:hover:text-secondary-text-dark transition-all duration-500"
+              className="transition-all duration-500 hover:text-secondary-text-light dark:hover:text-secondary-text-dark"
               onClick={handleMenuToggle}
               size={25}
             />
           ) : (
             <BiMenu
-              className="hover:text-secondary-text-light dark:hover:text-secondary-text-dark transition-all duration-500"
+              className="transition-all duration-500 hover:text-secondary-text-light dark:hover:text-secondary-text-dark"
               onClick={handleMenuToggle}
               size={25}
             />
@@ -60,7 +60,7 @@ export default function NavBar() {
             <div
               className={`absolute ${
                 isMenuOpen ? "top-[56px]" : "top-[-898px]"
-              } pr-4 h-screen w-full left-0 z-50 bg-background-light dark:bg-background-dark animate-fade-out-top transition-all duration-500`}
+              } left-0 z-50 h-screen w-full animate-fade-out-top bg-background-light pr-4 transition-all duration-500 dark:bg-background-dark`}
             >
               <ul className="flex flex-col items-end">
                 <NavBarList onItemClick={handleMenuToggle} />
