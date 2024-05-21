@@ -34,7 +34,6 @@ const InputTextArea = forwardRef<
           {...props}
         />
       </label>
-      <Loading />
       <Errors message={errors} />
       {description && (
         <div className="text-xs  leading-6 tracking-wide text-gray-400">
