@@ -22,9 +22,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image" href="/icon.png" />
       </head>
+
       <body
-        className={`${inconsolata.variable} ${manrope.variable} ${poppins.variable}  flex  min-h-svh flex-col scroll-smooth bg-background-light pt-14 font-inconsolata text-primary-text-light transition-all duration-500 md:pt-20 dark:bg-background-dark dark:text-primary-text-dark`}
+        className={`${inconsolata.variable} ${manrope.variable} ${poppins.variable} flex  min-h-svh flex-col scroll-smooth bg-background-light pt-14 font-inconsolata text-primary-text-light transition-all duration-500 md:pt-20 dark:bg-background-dark dark:text-primary-text-dark`}
       >
+        {/* adding the font variable to the body allows to use the font in the tailwind config in it  */}
         <NavBar />
         {children}
         <Footer />
