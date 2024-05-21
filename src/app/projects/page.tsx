@@ -1,11 +1,18 @@
 import { Suspense } from "react";
 import Projects from "@/components/Projects";
-import Loading from "@/components/Loading";
+import Link from "next/link";
+import Button from "@/components/Button";
+import LoadingBar from "@/components/LoadingBar";
 
 export default async function ProjectsSection() {
   return (
-    <Suspense fallback={<Loading />}>
+    <section className="m-8 flex flex-1 animate-fade-in flex-col items-center justify-around">
       <Projects />
-    </Suspense>
+      <Link href="https://drive.google.com/file/d/1KAuuPrkc5mLjWSZMcAJ98foh7Pi5_zed/view?usp=sharing">
+        <Button className="mt-8 w-80 rounded-3xl transition-all duration-500">
+          DOWNLOAD CV
+        </Button>
+      </Link>
+    </section>
   );
 }

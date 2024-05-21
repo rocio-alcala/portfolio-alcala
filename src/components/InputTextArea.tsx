@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, forwardRef } from "react";
 
 import Errors from "./Errors";
 import { cn } from "../../helpers";
-import Loading from "./Loading";
+import Loading from "./LoadingBar";
 
 interface InputTextAreaSpecificProps {
   id: string | number;

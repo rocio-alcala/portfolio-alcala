@@ -1,11 +1,11 @@
-import Loading from "./Loading";
+import Loading from "./LoadingBar";
 import StackItem from "./StackItem";
 
 export default function AboutMe() {
   return (
-    <section className=" font-inconsolata font-semibold p-10 flex flex-1 flex-col justify-around">
-      <article className="flex flex-col animate-fade-in-right my-10 sm:w-[70%] px-6 md:px-14 lg:px-32">
-        <h2 className="text-4xl md:text-6xl py-2 mb-2 items-start font-bold font-poppins">
+    <section className=" flex flex-1 flex-col justify-around p-10 font-inconsolata font-semibold">
+      <article className="my-10 flex animate-fade-in-right flex-col px-6 sm:w-[70%] md:px-14 lg:px-32">
+        <h2 className="mb-2 items-start py-2 font-poppins text-4xl font-bold md:text-6xl">
           Me as a developer
         </h2>
         <p className="text-2xl">
@@ -16,11 +16,11 @@ export default function AboutMe() {
           have a keen interest in design, what I most enjoy about my work is
           bringing designs to life to create unique and beautiful interfaces.
         </p>
-        <span className="text-2xl w-fit relative after:z-[-10] before:z-[-10] before:absolute before:bottom-[0px] before:left-0 before:bg-background-secondary-light dark:before:bg-background-secondary-dark before:w-full after:absolute after:bottom-[0px] after:left-0 after:bg-[#F6AB16] dark:after:bg-[#241901] before:h-4 after:h-4 after:hover:w-full after:w-0 hover:after:transition-all after:transition-all after:duration-700 hover:after:duration-700">
+        <span className="relative w-fit text-2xl before:absolute before:bottom-[0px] before:left-0 before:z-[-10] before:h-4 before:w-full before:bg-background-secondary-light after:absolute after:bottom-[0px] after:left-0 after:z-[-10] after:h-4 after:w-0 after:bg-[#F6AB16] after:transition-all after:duration-700 after:hover:w-full hover:after:transition-all hover:after:duration-700 dark:before:bg-background-secondary-dark dark:after:bg-[#241901]">
           We eat with our eyes.
         </span>
       </article>
-      <div className="about animate-fade-in flex flex-wrap justify-center p-4 my-10 md:my-32 md:mx-32 xl:mx-52">
+      <div className="about my-10 flex animate-fade-in flex-wrap justify-center p-4 md:mx-32 md:my-32 xl:mx-52">
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
@@ -35,8 +35,8 @@ export default function AboutMe() {
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" />
       </div>
-      <article className="about flex flex-col items-end self-end animate-fade-in-left my-10 mb-16 sm:w-[70%] px-6 md:px-14 lg:px-32">
-        <h2 className="text-4xl md:text-6xl py-2 mb-2 items-start font-bold font-poppins text-end">
+      <article className="about my-10 mb-16 flex animate-fade-in-left flex-col items-end self-end px-6 sm:w-[70%] md:px-14 lg:px-32">
+        <h2 className="mb-2 items-start py-2 text-end font-poppins text-4xl font-bold md:text-6xl">
           When I'm not coding
         </h2>
         <p className="text-end text-2xl">
