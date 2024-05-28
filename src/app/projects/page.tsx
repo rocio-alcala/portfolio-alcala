@@ -1,8 +1,6 @@
-import { Suspense } from "react";
 import Projects from "@/components/Projects";
 import Link from "next/link";
 import Button from "@/components/Button";
-import LoadingBar from "@/components/LoadingBar";
 
 export default async function ProjectsSection() {
   return (
