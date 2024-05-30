@@ -1,13 +1,14 @@
 import Link from "next/link";
 import Button from "./Button";
 import ProjectCard, { Project } from "./ProjectCard";
+import db from "../../db.json";
 
 async function getProjects(): Promise<Project[]> {
   await new Promise((resolve) => {
     setTimeout(resolve, 2000);
   });
   const projects = await fetch(
-    "https://portfolio-77ff1-default-rtdb.firebaseio.com/projects.json",
+    "https://portfolio-aad0e-default-rtdb.firebaseio.com/projects.json",
   );
   if (!projects.ok) {
     throw new Error("Error fetching projects");

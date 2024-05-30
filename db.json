@@ -17,14 +17,6 @@
       "repo": "https://github.com/No-Country/c15-41-t-java-react"
     },
     {
-      "name": "Brastlewark",
-      "id": 3,
-      "description": "This app displays the citizens of a city and allows users to filter and search. I developed this project to implement pagination functionality on the client side.",
-      "url": "https://brastlewark-mocha.vercel.app/",
-      "img": "https://raw.githubusercontent.com/rocio-alcala/portfolio-alcala/main/public/brastlewark.png",
-      "repo": "https://github.com/rocio-alcala/Brastlewark"
-    },
-    {
       "name": "Covid data",
       "id": 4,
       "description": "A project that visualizes COVID cases and death data obtained from the Our World in Data database.",
