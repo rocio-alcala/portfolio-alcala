@@ -1,21 +1,5 @@
-import Link from "next/link";
-import Button from "./Button";
 import ProjectCard, { Project } from "./ProjectCard";
-import db from "../../db.json";
-
-async function getProjects(): Promise<Project[]> {
-  await new Promise((resolve) => {
-    setTimeout(resolve, 2000);
-  });
-  const projects = await fetch(
-    "https://portfolio-aad0e-default-rtdb.firebaseio.com/projects.json",
-  );
-  if (!projects.ok) {
-    throw new Error("Error fetching projects");
-  }
-  const returnProjects: Project[] = await projects.json();
-  return returnProjects;
-}
+import { getProjects } from "@/services/getProjects";
 
 export default async function Projects() {
   const projects = await getProjects();
