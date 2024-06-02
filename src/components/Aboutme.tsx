@@ -4,23 +4,27 @@ import StackItem from "./StackItem";
 export default function AboutMe() {
   return (
     <section className=" flex flex-1 flex-col justify-around p-10 font-inconsolata font-semibold">
-      <article className="my-10 flex animate-fade-in-right flex-col px-6 sm:w-[70%] md:px-14 lg:px-32">
-        <h2 className="mb-2 items-start py-2 font-poppins text-4xl font-bold md:text-6xl">
-          Me as a developer
-        </h2>
-        <p className="text-2xl">
-          Hi there! My name is Rocio, you can call me Rosie. I am a front end
-          developer currently based in Argentina, captivated by the magic behind
-          what makes the web work with each click. I work as a React developer
-          and enjoy learning new tools to develop and improve applications, I
-          have a keen interest in design, what I most enjoy about my work is
-          bringing designs to life to create unique and beautiful interfaces.
-        </p>
-        <span className="relative w-fit text-2xl before:absolute before:bottom-[0px] before:left-0 before:z-[-10] before:h-4 before:w-full before:bg-background-secondary-light after:absolute after:bottom-[0px] after:left-0 after:z-[-10] after:h-4 after:w-0 after:bg-[#F6AB16] after:transition-all after:duration-700 after:hover:w-full hover:after:transition-all hover:after:duration-700 dark:before:bg-background-secondary-dark dark:after:bg-[#241901]">
-          We eat with our eyes.
-        </span>
-      </article>
-      <div className="about my-10 flex animate-fade-in flex-wrap justify-center p-4 md:mx-32 md:my-32 xl:mx-52">
+      <div className="flex animate-fade-in-right flex-wrap items-center justify-center">
+        <article className="flex min-w-[50%] flex-1 flex-shrink flex-col px-3 md:px-3 lg:px-8 min-[1088px]:my-10">
+          <h2 className="mb-2 items-start py-2 font-poppins text-4xl font-bold md:text-6xl">
+            Me as a developer
+          </h2>
+          <p className="text-2xl">
+            Hi there! My name is Rocio, you can call me Rosie. I am a front end
+            developer currently based in Argentina, captivated by the magic
+            behind what makes the web work with each click. I work as a React
+            developer and enjoy learning new tools to develop and improve
+            applications, I have a keen interest in design, what I most enjoy
+            about my work is bringing designs to life to create unique and
+            beautiful interfaces.
+          </p>
+          <span className="relative w-fit text-2xl before:absolute before:bottom-[0px] before:left-0 before:z-[-10] before:h-4 before:w-full before:bg-background-secondary-light after:absolute after:bottom-[0px] after:left-0 after:z-[-10] after:h-4 after:w-0 after:bg-[#F6AB16] after:transition-all after:duration-700 after:hover:w-full hover:after:transition-all hover:after:duration-700 dark:before:bg-background-secondary-dark dark:after:bg-[#241901]">
+            We eat with our eyes.
+          </span>
+        </article>
+        <img src="/coding-1.png" />
+      </div>
+      <div className="onview my-10 flex animate-fade-in flex-wrap justify-center p-4 md:mx-32 md:my-32 xl:mx-52">
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
@@ -35,17 +39,20 @@ export default function AboutMe() {
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" />
       </div>
-      <article className="about my-10 mb-16 flex animate-fade-in-left flex-col items-end self-end px-6 sm:w-[70%] md:px-14 lg:px-32">
-        <h2 className="mb-2 items-start py-2 text-end font-poppins text-4xl font-bold md:text-6xl">
-          When I'm not coding
-        </h2>
-        <p className="text-end text-2xl">
-          I'm also a biologist, gardener, pastry chef, hiker, ceramist, and
-          animal lover. Curious and passionate about nature, and love spending
-          time with my cat, who enjoys stepping onto my keyboard and messing up
-          my code.
-        </p>
-      </article>
+      <div className="onview flex animate-fade-in-right flex-wrap items-center justify-center">
+        <article className="flex min-w-[50%] flex-1 animate-fade-in-left flex-col items-end px-3 md:px-3 lg:px-8 min-[1088px]:my-10">
+          <h2 className="mb-2 items-start py-2 text-end font-poppins text-4xl font-bold md:text-6xl">
+            When I'm not coding
+          </h2>
+          <p className="text-end text-2xl">
+            I'm also a biologist, gardener, pastry chef, hiker, ceramist, and
+            animal lover. Curious and passionate about nature, and love spending
+            time with my cat, who enjoys stepping onto my keyboard and messing
+            up my code.
+          </p>
+        </article>
+        <img src="/gardening.png" className="min-[1088px]:order-first" />
+      </div>
     </section>
   );
 }

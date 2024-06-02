@@ -43,6 +43,6 @@
   }
 }
 
-.about {
+.onview {
   animation-timeline: view(600px 0px);
 }
