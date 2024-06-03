@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Loading from "./LoadingBar";
 import StackItem from "./StackItem";
 
@@ -22,7 +23,13 @@ export default function AboutMe() {
             We eat with our eyes.
           </span>
         </article>
-        <img src="/coding-1.png" />
+        <Image
+          height={500}
+          width={500}
+          alt="coding"
+          src="/coding-1.png"
+          className="animate-slow-sink"
+        />
       </div>
       <div className="onview my-10 flex animate-fade-in flex-wrap justify-center p-4 md:mx-32 md:my-32 xl:mx-52">
         <StackItem src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
@@ -51,7 +58,13 @@ export default function AboutMe() {
             up my code.
           </p>
         </article>
-        <img src="/gardening.png" className="min-[1088px]:order-first" />
+        <Image
+          height={500}
+          width={500}
+          alt="gardening"
+          src="/gardening.png"
+          className="animate-slow-sink min-[1088px]:order-first"
+        />
       </div>
     </section>
   );

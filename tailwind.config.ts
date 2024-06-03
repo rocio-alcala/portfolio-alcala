@@ -126,6 +126,7 @@ const config: Config = {
         "fade-in-right": "fade-in-right 1s ease-in-out",
         "fade-in-left": "fade-in-left 1s ease-in-out",
         pulse: "pulse 1s ease-in-out",
+        "slow-sink": "sink 3s ease-in-out infinite",
         sink: "sink 1s ease-in-out infinite",
         appear: "appear 1s ease",
       },
