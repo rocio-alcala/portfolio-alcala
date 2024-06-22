@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply transition-all duration-300 ease-in-out;
+}
+
 /* Animacion no incluida en tailwind ya que no permite steps */
 .typetext {
   border-right: 2px solid;
@@ -43,6 +47,11 @@
   }
 }
 
-.onview {
-  animation-timeline: view(600px 0px);
+@layer utilities {
+  .onview {
+    animation-timeline: view(600px 0px);
+  }
+  .animateOnScroll {
+    animation-timeline: scroll();
+  }
 }
