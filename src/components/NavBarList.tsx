@@ -4,7 +4,7 @@ import {
   BiHomeAlt,
   BiMoon,
   BiSun,
-  BiUser
+  BiUser,
 } from "react-icons/bi";
 import NavBarItem from "./NavBarItem";
 import { useEffect, useState } from "react";
@@ -68,16 +68,16 @@ export default function NavBarList({ onItemClick }: NavBarList) {
           contact()
         </NavBarItem>
       </Link>
-      <div className="hover:cursor-pointer m-2 p-1 flex items-center">
+      <div className="m-2 flex items-center p-1 hover:cursor-pointer">
         {darkMode ? (
           <BiSun
-            className="animate-fade-out-top hover:text-secondary-text-light dark:hover:text-secondary-text-dark transition-* duration-300"
+            className="transition-* animate-fade-out-top duration-300 hover:text-secondary-text-light dark:hover:text-secondary-text-dark"
             onClick={() => setDarkMode(!darkMode)}
             size={25}
           />
         ) : (
           <BiMoon
-            className="animate-fade-out-top hover:text-secondary-text-light dark:hover:text-secondary-text-dark transition-* duration-300"
+            className="transition-* animate-fade-out-top duration-300 hover:text-secondary-text-light dark:hover:text-secondary-text-dark"
             onClick={() => setDarkMode(!darkMode)}
             size={25}
           />
