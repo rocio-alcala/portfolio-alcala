@@ -16,30 +16,28 @@ interface ContactForm {
 export default function ContactForm() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState<string>();
-  const [isLoading, setIsLoading] = useState(false);
 
   const {
     register,
     handleSubmit,
-    formState: { errors },
-    reset
+    formState: { errors, isSubmitting },
+    reset,
   } = useForm<ContactForm>();
 
   async function onSubmit(dataForm: ContactForm) {
     const dataFormWithKey = {
       ...dataForm,
-      access_key: "8dc60974-c226-4f08-8a91-3102ed8269a5"
+      access_key: "8dc60974-c226-4f08-8a91-3102ed8269a5",
     };
     const dataFormWithKeyJson = JSON.stringify(dataFormWithKey);
     try {
-      setIsLoading(true);
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json"
+          Accept: "application/json",
         },
-        body: dataFormWithKeyJson
+        body: dataFormWithKeyJson,
       }).then((res) => res.json());
       setIsModalOpen(true);
       setModalMessage(res.message);
@@ -50,15 +48,13 @@ export default function ContactForm() {
       console.error(error);
       setIsModalOpen(true);
       setModalMessage("Error sending message, try again");
-    } finally {
-      setIsLoading(false);
     }
   }
 
   return (
     <>
       <form
-        className="w-[60%] min-w-64 flex flex-col justify-center"
+        className="flex w-[60%] min-w-64 flex-col justify-center"
         onSubmit={handleSubmit(onSubmit)}
       >
         <InputText
@@ -68,8 +64,8 @@ export default function ContactForm() {
             required: "name is required",
             maxLength: {
               value: 30,
-              message: "max length for name is 30 characters"
-            }
+              message: "max length for name is 30 characters",
+            },
           })}
           errors={errors.name?.message}
           label="name"
@@ -79,9 +75,9 @@ export default function ContactForm() {
           {...register("email", {
             pattern: {
               value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-              message: "email must be valid"
+              message: "email must be valid",
             },
-            required: "email is required"
+            required: "email is required",
           })}
           errors={errors.email?.message}
           label="e-mail"
@@ -95,7 +91,7 @@ export default function ContactForm() {
           errors={errors.message?.message}
           className="min-h-80"
         />
-        <Button className="mt-3" type="submit" isLoading={isLoading}>
+        <Button className="mt-3" type="submit" isLoading={isSubmitting}>
           SUBMIT
         </Button>
       </form>
