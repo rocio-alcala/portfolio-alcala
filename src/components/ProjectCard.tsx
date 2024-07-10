@@ -17,13 +17,13 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="flex-col relative justify-center border-2 rounded-md p-3 m-2 max-w-96 hover:scale-105 transition-all duration-500">
+    <div className="relative m-2 max-w-96 flex-col justify-center rounded-md border-2 p-3 transition-all duration-500 hover:scale-105">
       <div className="flex justify-between ">
-        <h3 className="text-xl font-bold pb-2">{project.name}</h3>{" "}
+        <h3 className="pb-2 text-xl font-bold">{project.name}</h3>{" "}
         <Link href={project.repo}>
           <BiLogoGithub
             size={25}
-            className="hover:text-secondary-text-light dark:hover:text-secondary-text-dark transition duration-500"
+            className="transition duration-500 hover:text-secondary-text-light dark:hover:text-secondary-text-dark"
           />
         </Link>
       </div>
@@ -31,14 +31,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <Link href={project.url}>
         <div className="relative">
           <Image
-            className="rounded cursor-pointer animate-[appear_1.8s_ease]"
+            className="aspect-[5/3] animate-[appear_1.8s_ease] cursor-pointer rounded"
             src={project.img}
             alt={project.name}
             width={356}
             height={210}
           />
 
-          <p className="hidden cursor-pointer md:block text-gray-900 rounded absolute top-0 left-0 h-full p-3 backdrop-blur-3xl opacity-0 hover:opacity-100 transition-all duration-700">
+          <p className="absolute left-0 top-0 hidden h-full cursor-pointer rounded p-3 text-gray-900 opacity-0 backdrop-blur-3xl transition-all duration-700 hover:opacity-100 md:block">
             {project.description}
           </p>
         </div>
