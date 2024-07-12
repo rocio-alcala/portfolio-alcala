@@ -38,7 +38,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             height={210}
           />
 
-          <p className="absolute left-0 top-0 hidden h-full cursor-pointer rounded p-3 text-gray-900 opacity-0 backdrop-blur-3xl transition-all duration-700 hover:opacity-100 md:block">
+          <p className="absolute left-0 top-0 hidden h-full cursor-pointer rounded p-3 text-gray-500 opacity-0 backdrop-blur-3xl transition-all duration-700 hover:opacity-100 md:block">
             {project.description}
           </p>
         </div>
