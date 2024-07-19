@@ -1,8 +1,16 @@
 {
   "projects": [
     {
-      "name": "My cat id",
+      "name": "Kokekosas",
       "id": 1,
+      "description": "Landing page for a kokedama and plants store",
+      "url": "https://kokekosas.vercel.app",
+      "img": "https://raw.githubusercontent.com/rocio-alcala/portfolio-alcala/main/public/kokekosas.png",
+      "repo": "https://github.com/rocio-alcala/kokekosas"
+    },
+    {
+      "name": "My cat id",
+      "id": 2,
       "description": "An app created with Nextjs to upload and manage data about your cat online, allowing you to keep track of vaccines, and vaccination and deworming dates.",
       "url": "https://my-cat-id.vercel.app",
       "img": "https://raw.githubusercontent.com/rocio-alcala/portfolio-alcala/main/public/my-cat-id.png",
@@ -10,7 +18,7 @@
     },
     {
       "name": "Bibliotech",
-      "id": 2,
+      "id": 3,
       "description": "Bibliotech is a comprehensive library management platform that allows for searching and recording books, managing loans with dates and users, and sending automatic reminders to return books on time. The loading of this app might take some time until the server wakes up",
       "url": "https://bibliotechapp.website/",
       "img": "https://raw.githubusercontent.com/rocio-alcala/portfolio-alcala/main/public/bibliotech.png",

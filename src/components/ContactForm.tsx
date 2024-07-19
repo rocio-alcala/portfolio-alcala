@@ -17,6 +17,8 @@ export default function ContactForm() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState<string>();
 
+  const ACCESS_KEY = "8dc60974-c226-4f08-8a91-3102ed8269a5";
+
   const {
     register,
     handleSubmit,
@@ -27,7 +29,7 @@ export default function ContactForm() {
   async function onSubmit(dataForm: ContactForm) {
     const dataFormWithKey = {
       ...dataForm,
-      access_key: "8dc60974-c226-4f08-8a91-3102ed8269a5",
+      access_key: ACCESS_KEY,
     };
     const dataFormWithKeyJson = JSON.stringify(dataFormWithKey);
     try {
