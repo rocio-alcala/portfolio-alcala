@@ -28,7 +28,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </Link>
       </div>
       <p className="pb-3 md:hidden">{project.description}</p>
-      <Link href={project.url}>
+      <Link href={`projects/${project.id}`} scroll={false}>
         <div className="relative">
           <Image
             className="aspect-[5/3] animate-[appear_1.8s_ease] cursor-pointer rounded"
