@@ -1,4 +1,4 @@
-import ProjectCard from "@/components/ProjectCard";
+import ProjectPage from "@/components/ProjectPage";
 import { getProjects } from "@/services/getProjects";
 import { notFound } from "next/navigation";
 import React from "react";
@@ -15,7 +15,7 @@ export default async function Page({
 
   return (
     <div className="flex flex-1 items-center justify-center">
-      <ProjectCard project={project} />
+      <ProjectPage project={project} />
     </div>
   );
 }

@@ -9,6 +9,7 @@ export type Project = {
   url: string;
   repo: string;
   img: string;
+  tags: string[]
 };
 
 interface ProjectCardProps {

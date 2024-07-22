@@ -1,5 +1,5 @@
 import BaseModal from "@/components/BaseModal";
-import ProjectCard from "@/components/ProjectCard";
+import ProjectPage from "@/components/ProjectPage";
 import { getProjects } from "@/services/getProjects";
 import { notFound } from "next/navigation";
 import React from "react";
@@ -15,8 +15,8 @@ export default async function Page({
   if (!project) return notFound();
 
   return (
-    <BaseModal isOpen={true}>
-      <ProjectCard project={project} />
+    <BaseModal isOpen={true} hasCloseBtn={true} title={project.name}>
+      <ProjectPage project={project} />
     </BaseModal>
   );
 }
