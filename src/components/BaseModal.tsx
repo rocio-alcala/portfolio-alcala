@@ -77,7 +77,7 @@ export default function BaseModal({
 
   return (
     <dialog
-      className="rounded-md backdrop:bg-black/50"
+      className="rounded-md bg-background-light text-primary-text-light scrollbar-thin backdrop:bg-black/50 dark:bg-background-dark dark:text-primary-text-dark"
       ref={modalRef}
       onKeyDown={handleKeyDown}
     >

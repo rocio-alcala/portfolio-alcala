@@ -5,7 +5,7 @@ import Experience from "@/components/Experience";
 
 export default async function ProjectsSection() {
   return (
-    <section className="m-8 flex flex-1 animate-fade-in flex-col items-center justify-around">
+    <section className="m-2 flex flex-1 animate-fade-in flex-col items-center justify-around md:m-8">
       <Experience />
       <Projects />
       <Link href="https://drive.google.com/file/d/1KAuuPrkc5mLjWSZMcAJ98foh7Pi5_zed/view?usp=sharing">
