@@ -3,8 +3,15 @@ import { Project } from "./ProjectCard";
 import Image from "next/image";
 import Button from "./Button";
 import Link from "next/link";
+import { getProjects } from "@/services/getProjects";
+import { notFound } from "next/navigation";
 
-export default function ProjectPage({ project }: { project: Project }) {
+export default async function ProjectPage({ id }: { id: number }) {
+  // should use a get project by id
+  const projects = await getProjects();
+  const project = projects.find((project) => project.id == id);
+  if (!project) return notFound();
+
   return (
     <div className="flex max-w-[1100px] flex-col p-8 md:p-14">
       <h1 className=" my-4 font-poppins text-3xl font-bold md:text-4xl">

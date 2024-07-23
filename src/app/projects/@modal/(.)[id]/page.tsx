@@ -1,22 +1,22 @@
 import BaseModal from "@/components/BaseModal";
+import LoadingBar from "@/components/LoadingBar";
 import ProjectPage from "@/components/ProjectPage";
+import ProjectPageSkeleton from "@/components/ProjectPageSkeleton";
+import Spinner from "@/components/Spinner";
 import { getProjects } from "@/services/getProjects";
 import { notFound } from "next/navigation";
-import React from "react";
+import React, { Suspense } from "react";
 
 export default async function Page({
   params: { id },
 }: {
   params: { id: number };
 }) {
-  // should use a get project by id
-  const projects = await getProjects();
-  const project = projects.find((project) => project.id == id);
-  if (!project) return notFound();
-
   return (
-    <BaseModal isOpen={true} hasCloseBtn={true} title={project.name}>
-      <ProjectPage project={project} />
+    <BaseModal isOpen={true}>
+      <Suspense fallback={<LoadingBar className="w-28 md:m-10 md:w-96" />}>
+        <ProjectPage id={id} />
+      </Suspense>
     </BaseModal>
   );
 }
