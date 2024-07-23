@@ -1,8 +1,17 @@
-import { PropsWithChildren, useCallback, useEffect, useRef } from "react";
+"use client";
+
+import { useRouter } from "next/navigation";
+import {
+  PropsWithChildren,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+} from "react";
 
 interface BaseModalProps {
   isOpen: boolean;
-  onClose: () => void;
+  onClose?: () => void;
   title?: string;
   hasCloseBtn?: boolean;
 }
@@ -16,8 +25,23 @@ export default function BaseModal({
 }: PropsWithChildren<BaseModalProps>) {
   const modalRef = useRef<HTMLDialogElement | null>(null);
 
+  // defining router here to use in server component and fetch the data in the server
+  const router = useRouter();
+
+  // for parallel and intercepting route
+  // if none onClose prop close the modal(intercepting route) going back in router
+  const newOnClose = useMemo(() => {
+    return (
+      onClose ||
+      function () {
+        router.back();
+      }
+    );
+  }, [onClose, router]);
   function handleKeyDown(event: React.KeyboardEvent<HTMLDialogElement>) {
-    if (event.key === "Escape") onClose();
+    if (event.key === "Escape") {
+      newOnClose();
+    }
   }
 
   const closeMenu = useCallback(
@@ -26,10 +50,10 @@ export default function BaseModal({
       // target inside the dialog will be one of <dialog> children
       // only close when target is dialog (outside <dialog>)
       if (modalRef.current && modalRef.current === event.target) {
-        onClose();
+        newOnClose();
       }
     },
-    [onClose],
+    [newOnClose],
   );
 
   // add event listener for close on click outside
@@ -53,17 +77,17 @@ export default function BaseModal({
 
   return (
     <dialog
-      className="rounded-md backdrop:bg-black/50"
+      className="rounded-md bg-background-light text-primary-text-light shadow-lg scrollbar-thin backdrop:bg-black/50 dark:bg-background-dark dark:text-primary-text-dark"
       ref={modalRef}
       onKeyDown={handleKeyDown}
     >
       {/*  header */}
       {title && (
-        <div className="flex items-start justify-between p-5 border-b border-solid rounded-t border-grey6">
+        <div className="border-grey6 flex items-start justify-between rounded-t border-b border-solid p-5">
           <h3>{title}</h3>
           {/* close button */}
           {hasCloseBtn && (
-            <button onClick={onClose}>
+            <button onClick={newOnClose}>
               <span>x</span>
             </button>
           )}

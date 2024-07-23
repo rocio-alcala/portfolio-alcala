@@ -15,7 +15,7 @@ export default function CardExperience({
   endDate,
 }: CardExperienceProps) {
   return (
-    <div className="relative flex w-full items-center justify-start gap-11 p-5">
+    <div className="relative flex w-full items-center justify-start gap-4 p-5 md:gap-11">
       <div className="absolute left-[31px] top-0 -z-10 h-full w-[2px] bg-primary-text-light dark:bg-primary-text-dark"></div>
       <div className="h-fit w-fit whitespace-nowrap bg-background-light dark:bg-background-dark">
         <CgEditBlackPoint size={25} />
