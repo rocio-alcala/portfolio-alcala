@@ -8,7 +8,7 @@ export default async function ProjectsSection() {
     <section className="m-2 flex flex-1 animate-fade-in flex-col items-center justify-around md:m-8">
       <Experience />
       <Projects />
-      <Link href="https://drive.google.com/file/d/1KAuuPrkc5mLjWSZMcAJ98foh7Pi5_zed/view?usp=sharing">
+      <Link href="https://drive.google.com/file/d/1P1y5WqXfmC50StkWep8UNUlGj59HSeIt/view?usp=sharing">
         <Button className="mt-8 w-80 rounded-3xl transition-all duration-500">
           DOWNLOAD CV
         </Button>
